@@ -1,0 +1,149 @@
+body {
+    background-color: #0e0c0c;
+}
+
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.card {
+    width: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar {
+    background: linear-gradient(45deg, #E61532, #FF3300, #FEE311);
+    background-size: 600% 600%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow: hidden;
+    animation: gradientAnimation 8s ease infinite;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-brand .one-piece-logo {
+    margin-top: -5px;
+    animation: floatingAnimation 3s ease-in-out infinite;
+  }
+
+  @keyframes floatingAnimation {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 5px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  #navbarNav,
+  .navbar-brand,
+  .navbar-toggler {
+    z-index: 1;
+  }
+
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .nav-item a,
+  .one-piece-title {
+    color: white;
+    font-family: 'One Piece Font', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .nav-item a:hover {
+    background-color: #FEE311;
+    color: #E61532;
+  }
+
+  .nav-item a {
+    padding: 10px;
+  }
+
+  .navbar-toggler i {
+    color: white;
+    opacity: 1;
+  }
+
+  
+  .nav-item.active a {
+    background-color: #FEE311;
+    color: #E61532;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  
+  .vertical-word {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .vertical-word .letter {
+    font-family: 'One Piece Font', sans-serif;
+    font-size: 200px;
+    line-height: 1;
+    color: black;
+    margin: 3px 0;
+    opacity: 0.7;
+  }
+
+  @media (min-width: 992px) {
+    .one-piece-title {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .navbar-brand .one-piece-logo {
+      margin-top: -5px;
+    }
+
+    .one-piece-title {
+      font-size: 30px;
+      margin-left: 5px;
+      padding:5px;
+    }
+
+    .vertical-word .letter {
+      font-size: 100px;
+    }
+  }
